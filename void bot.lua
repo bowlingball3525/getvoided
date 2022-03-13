@@ -16,7 +16,7 @@ until L_1_ and L_1_.Character and L_1_.Character:FindFirstChild("HumanoidRootPar
 local L_2_ = game:GetService("RunService")
 
 if not _G.thingtosay then
-	_G.thingtosay = ""
+	_G.thingtosay = "add lanc# 0001 for the best methods"
 end
 
 G_1_ = true
