@@ -44,17 +44,17 @@ rservice.Stepped:Connect(function()
     end
 end)
 coroutine.resume(coroutine.create(function()
-    while wait(3) do
+    while wait(1) do
         pcall(function()
             for _,z in pairs(game.Players:GetPlayers()) do
                 if z ~= lp then
                     if lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") and z and z.Character and z.Character:FindFirstChildOfClass("Humanoid").Sit == false and z.Character:FindFirstChildOfClass("Humanoid").FloorMaterial ~= Enum.Material.Air then
                         spawn(function() pcall(function()
                             lp.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9e5, workspace.FallenPartsDestroyHeight + 30,9e5)
-                            attach(z); wait(3)
+                            attach(z); wait(1)
                             lp.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9e5, workspace.FallenPartsDestroyHeight + 4.5,9e5)
                         end) end)
-                        wait(2)
+                        wait(0)
                     end
                 end
             end
