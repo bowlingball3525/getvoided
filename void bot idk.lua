@@ -5,7 +5,7 @@ local lp = game.Players.LocalPlayer
 repeat wait() until lp and lp.Character and lp.Character:FindFirstChild("HumanoidRootPart")
 local rservice = game:GetService("RunService")
 
-if not _G.thingtosay then _G.thingtosay = "" end
+if not _G.thingtosay then _G.thingtosay = "lanc run's dollhouse. { add lanc# 0001 to buy a whitelist } get voided and muted :troll:" end
 
 DebounceTheNigger=true
 
@@ -44,17 +44,17 @@ rservice.Stepped:Connect(function()
     end
 end)
 coroutine.resume(coroutine.create(function()
-    while wait(7) do
+    while wait(1) do
         pcall(function()
             for _,z in pairs(game.Players:GetPlayers()) do
                 if z ~= lp then
                     if lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") and z and z.Character and z.Character:FindFirstChildOfClass("Humanoid").Sit == false and z.Character:FindFirstChildOfClass("Humanoid").FloorMaterial ~= Enum.Material.Air then
                         spawn(function() pcall(function()
                             lp.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9e5, workspace.FallenPartsDestroyHeight + 30,9e5)
-                            attach(z); wait(7)
+                            attach(z); wait(1)
                             lp.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9e5, workspace.FallenPartsDestroyHeight + 4.5,9e5)
                         end) end)
-                        wait(6)
+                        wait(0)
                     end
                 end
             end
