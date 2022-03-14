@@ -5,7 +5,7 @@ local lp = game.Players.LocalPlayer
 repeat wait() until lp and lp.Character and lp.Character:FindFirstChild("HumanoidRootPart")
 local rservice = game:GetService("RunService")
 
-if not _G.thingtosay then _G.thingtosay = "add lanc# 0001 for the best methods" end
+if not _G.thingtosay then _G.thingtosay = "" end
 
 DebounceTheNigger=true
 
