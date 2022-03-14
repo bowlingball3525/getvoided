@@ -9,8 +9,8 @@ if not _G.thingtosay then _G.thingtosay = "" end
 
 DebounceTheNigger=true
 
-coroutine.resume(coroutine.create(function() while wait(0.3) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then for _,v in next, z.Backpack:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end) end end)) 
-coroutine.resume(coroutine.create(function() while wait(0.3) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then if z.Character and z.Character:FindFirstChildOfClass("Tool") then for _,v in next, z.Character:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end end) end end))
+coroutine.resume(coroutine.create(function() while wait(1) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then for _,v in next, z.Backpack:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end) end end)) 
+coroutine.resume(coroutine.create(function() while wait(1) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then if z.Character and z.Character:FindFirstChildOfClass("Tool") then for _,v in next, z.Character:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end end) end end))
 
 for _, z in next, game:GetDescendants() do if z:IsA "Seat" then z.Disabled = true end end
 
@@ -44,17 +44,17 @@ rservice.Stepped:Connect(function()
     end
 end)
 coroutine.resume(coroutine.create(function()
-    while wait(1) do
+    while wait(7) do
         pcall(function()
             for _,z in pairs(game.Players:GetPlayers()) do
                 if z ~= lp then
                     if lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") and z and z.Character and z.Character:FindFirstChildOfClass("Humanoid").Sit == false and z.Character:FindFirstChildOfClass("Humanoid").FloorMaterial ~= Enum.Material.Air then
                         spawn(function() pcall(function()
                             lp.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9e5, workspace.FallenPartsDestroyHeight + 30,9e5)
-                            attach(z); wait(1)
+                            attach(z); wait(7)
                             lp.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9e5, workspace.FallenPartsDestroyHeight + 4.5,9e5)
                         end) end)
-                        wait(0)
+                        wait(6)
                     end
                 end
             end
